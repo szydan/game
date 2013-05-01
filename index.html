@@ -1,1 +1,68 @@
-My GitHub Page
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css" />
+  <style>
+  
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cone { width: 150px; height: 240px; float:left;}
+  .ice { width: 150px; height: 150px; float:left;}
+  #container { margin:10px; width:90%; height:90%; border:1px red solid;}
+  
+  #cone2{position:absolute; left:40;}    
+
+
+  </style>
+  <script>
+  $(function() {
+  
+
+    $( ".ice" ).draggable({ containment: "#container", scroll: false });
+    $( ".cone" ).draggable({ containment: "#container", scroll: false });
+    
+
+  });
+  </script>
+</head>
+<body>
+ 
+
+<div id="container">
+
+    <div id="cone1" class="cone">
+      <img src="img/cone3.png" width="150"/>
+    </div>
+    <div id="cone2" class="cone">
+      <img src="img/cone2.png" width="150"/>
+    </div>
+    <div id="cone3" class="cone">
+      <img src="img/cone1.png" width="150"/>
+    </div>
+
+
+    <div id="ice1" class="ice">
+      <img src="img/ice-blue.png" width="150"/>
+    </div>
+    <div id="ice2" class="ice">
+      <img src="img/ice-orange.png" width="150"/>
+    </div>
+    <div id="ice3" class="ice">
+      <img src="img/ice-green.png" width="150"/>
+    </div>
+
+
+</div> 
+ 
+</body>
+</html>
