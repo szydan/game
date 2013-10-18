@@ -99,6 +99,13 @@
 
   $(function() {
   
+    $("#play").click(function(e){
+      document.getElementById("ice-cream-track").play();
+    });	
+
+    $("#pause").click(function(e){
+      document.getElementById("ice-cream-track").pause();
+    });	
 
     $( ".ice" ).draggable({ containment: "#container", scroll: false, grid: [ 10,10 ], stack:".ice"  });
     $( ".cone" ).draggable({ containment: "#container", scroll: false, grid: [ 10,10 ],stack:".cone"   });
@@ -130,6 +137,11 @@
 <body>
  
 <a id="fullscreen-button" >Full screen</a>
+ <input type="button" id="play" value="Play" />
+ <input type="button" id="pause" value="Pause" />
+ <audio id="ice-cream-track">
+        <source src="sounds/ice-cream-track.mp3">
+  </audio>
 <div class="container">
 
     <div id="cone1" class="cone">
